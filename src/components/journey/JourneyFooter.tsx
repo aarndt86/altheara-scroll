@@ -213,427 +213,322 @@ export function JourneyFooter() {
             </div>
           </div>
 
+        </div>
+        {/* ==================================================
+            PRICING & POST-PRICING NARRATIVE: THE SECRET
+            ================================================== */}
+        <div className="max-w-5xl mx-auto flex flex-col gap-20 sm:gap-28 w-full">
+          
           {/* ==================================================
               SECTION 1 — PRICING INTRODUCTION
               ================================================== */}
-          <div id="pricing" className="flex flex-col gap-6 text-center max-w-2xl mx-auto border-t border-[#E4DCCE] pt-16 sm:pt-20">
+          <div id="pricing" className="flex flex-col gap-6 text-center max-w-2xl mx-auto border-t border-[#E4DCCE] pt-20 sm:pt-28">
             <span className="font-sans text-[11px] tracking-[0.3em] text-[#8C8275] font-bold uppercase">
               CHOOSE HOW YOUR STORY GROWS
             </span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-[#1C1916] font-normal leading-[1.12] tracking-tight">
               START WITH A MOMENT.<br />BUILD SOMETHING THAT LASTS.
             </h2>
-            <p className="font-reading text-base sm:text-lg text-[#5A5248] leading-relaxed font-light">
-              Begin with seven moments for free. Continue with Altheara as your story grows. Or choose Legacy to preserve even more for the people who come after you.
+            <p className="font-reading text-base sm:text-lg text-[#5A5248] leading-relaxed font-light mt-1">
+              Begin with seven moments for free.<br className="hidden sm:inline" />
+              Continue with Altheara as your story grows.<br className="hidden sm:inline" />
+              Choose Legacy when you want to preserve even more.
             </p>
           </div>
 
           {/* ==================================================
-              SECTION 2 — THREE MEMBERSHIP CARDS
+              THREE MEMBERSHIP CARDS
               ================================================== */}
-          <div className="flex flex-col gap-8 w-full max-w-6xl mx-auto px-2 md:px-0">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch w-full">
-              
-              {/* CARD 1 — OPEN ($0) */}
-              <div className="bg-[#FAF9F6] p-7 sm:p-8 rounded-sm border border-[#E4DCCE] shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow relative">
-                <div className="flex flex-col">
-                  {/* Eyebrow & Badge */}
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#8C8275] uppercase">
-                      EXPERIENCE IT
-                    </span>
-                  </div>
-                  
-                  {/* Title & Price */}
-                  <h3 className="font-display text-3xl sm:text-4xl text-[#1C1916] font-normal mt-3">
-                    OPEN
-                  </h3>
-                  
-                  <div className="flex items-baseline gap-1.5 mt-2">
-                    <span className="font-display text-4xl text-[#1C1916] font-normal">$0</span>
-                  </div>
-
-                  <p className="font-sans text-[11px] text-[#8C8275] mt-1">
-                    Experience Altheara before deciding anything.
-                  </p>
-
-                  <div className="mt-3">
-                    <span className="inline-block bg-[#EAE7DE] text-[#5A5248] font-sans text-[9px] sm:text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-full">
-                      YOUR FIRST 7 MOMENTS ARE FREE
-                    </span>
-                  </div>
-
-                  <p className="font-reading text-sm text-[#5A5248] leading-relaxed font-light mt-4">
-                    Start small. Experience how a few ordinary moments begin becoming something worth keeping.
-                  </p>
-
-                  {/* CTA Block */}
-                  <div className="mt-7 mb-6">
-                    <button 
-                      onClick={() => {
-                        if (typeof window !== "undefined") {
-                          window.dispatchEvent(new CustomEvent("open-begin-modal"));
-                        }
-                      }}
-                      className="w-full block text-center border border-[#1C1916]/30 text-[#1C1916] font-sans text-xs uppercase tracking-wider font-bold py-3.5 rounded-full hover:bg-stone/5 transition-colors cursor-pointer"
-                    >
-                      BEGIN &rarr;
-                    </button>
-                    <span className="block text-center font-sans text-[10px] text-[#8C8275] tracking-wide mt-2">
-                      No subscription required.
-                    </span>
-                  </div>
-
-                  {/* Feature Group */}
-                  <div className="border-t border-[#E4DCCE]/80 pt-6">
-                    <span className="font-sans text-[10px] tracking-[0.2em] font-bold text-[#8C8275] uppercase block mb-3">
-                      INCLUDED &middot; AVAILABLE NOW
-                    </span>
-                    <ul className="font-reading text-sm text-[#2C241D] flex flex-col gap-3 font-light">
-                      {[
-                        "7 Daily Invitations",
-                        "7 Echoes",
-                        "7 Personal Reflections",
-                        "Private Moment Archive",
-                        "1 Story Preview"
-                      ].map((feat, idx) => (
-                        <li key={idx} className="flex gap-2.5 items-start">
-                          <span className="text-[#A68A56] font-bold shrink-0">✓</span>
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="mt-8 pt-4 border-t border-[#E4DCCE]/60 font-reading text-xs text-[#8C8275] italic">
-                  The core Altheara loop: Invitation &rarr; Echo &rarr; Reflection &rarr; Story Preview.
-                </div>
-              </div>
-
-              {/* CARD 2 — ALTHEARA ($12.99 / MO) — PRIMARY ANCHOR */}
-              <div className="bg-[#1C1916] text-[#FAF9F6] p-7 sm:p-8 rounded-sm border border-[#3D352E] shadow-xl flex flex-col justify-between relative lg:scale-[1.03] z-10 hover:shadow-2xl transition-all">
-                <div className="flex flex-col">
-                  {/* Eyebrow & Badge */}
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#C9AE7C] uppercase">
-                      LIVE WITH IT
-                    </span>
-                    <span className="inline-block bg-[#C9AE7C]/20 border border-[#C9AE7C]/40 text-wheat font-sans text-[9px] uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded-full">
-                      MOST CHOSEN
-                    </span>
-                  </div>
-
-                  {/* Title & Price */}
-                  <h3 className="font-display text-3xl sm:text-4xl text-ivory font-normal mt-3">
-                    ALTHEARA
-                  </h3>
-
-                  <div className="flex items-baseline gap-1.5 mt-2">
-                    <span className="font-display text-4xl text-ivory font-normal">$12.99</span>
-                    <span className="font-sans text-xs text-linen/60">/ month</span>
-                  </div>
-
-                  <p className="font-sans text-[11px] text-linen/60 mt-1">
-                    Keep your story growing.
-                  </p>
-
-                  <p className="font-reading text-sm text-linen/85 leading-relaxed font-light mt-4">
-                    The more you leave here, the more Altheara can connect—turning individual moments into an evolving story of your life.
-                  </p>
-
-                  {/* CTA Block */}
-                  <div className="mt-7 mb-6">
-                    <button 
-                      onClick={() => {
-                        if (typeof window !== "undefined") {
-                          window.dispatchEvent(new CustomEvent("open-begin-modal"));
-                        }
-                      }}
-                      className="w-full block text-center bg-[#FAF9F6] text-[#1C1916] font-sans text-xs uppercase tracking-wider font-bold py-3.5 rounded-full hover:bg-ivory transition-colors shadow-sm cursor-pointer"
-                    >
-                      KEEP MY STORY GROWING &rarr;
-                    </button>
-                    <span className="block text-center font-sans text-[10px] text-linen/50 tracking-wide mt-2">
-                      Cancel or export your archive at any time.
-                    </span>
-                  </div>
-
-                  {/* Feature Group: AVAILABLE NOW */}
-                  <div className="border-t border-linen/15 pt-6">
-                    <span className="font-sans text-[10px] tracking-[0.2em] font-bold text-[#C9AE7C] uppercase block mb-3">
-                      AVAILABLE NOW
-                    </span>
-                    <ul className="font-reading text-sm text-linen/90 flex flex-col gap-2.5 font-light">
-                      {[
-                        "Everything in Open",
-                        "Unlimited Daily Invitations",
-                        "Unlimited Echoes",
-                        "Unlimited Personal Reflections",
-                        "Growing Story & Chapters",
-                        "Complete Timeline & Archive",
-                        "Digital Library"
-                      ].map((feat, idx) => (
-                        <li key={idx} className="flex gap-2.5 items-start">
-                          <span className="text-wheat font-bold shrink-0">✓</span>
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Feature Group: AS ALTHEARA GROWS */}
-                  <div className="border-t border-linen/10 pt-5 mt-5">
-                    <div className="flex items-center justify-between gap-2 mb-3">
-                      <span className="font-sans text-[10px] tracking-[0.2em] font-semibold text-linen/60 uppercase">
-                        AS ALTHEARA GROWS
-                      </span>
-                      <span className="font-sans text-[9px] tracking-wider text-[#C9AE7C]/80 uppercase bg-[#C9AE7C]/10 px-2 py-0.5 rounded-full">
-                        Coming to Altheara
-                      </span>
-                    </div>
-                    <ul className="font-reading text-sm text-linen/65 flex flex-col gap-2.5 font-light">
-                      {[
-                        "Annual Digital Volume included",
-                        "Altheara Lens™",
-                        "Volume Studio",
-                        "Expanded story intelligence",
-                        "New Altheara member features as released"
-                      ].map((feat, idx) => (
-                        <li key={idx} className="flex gap-2.5 items-start text-linen/70">
-                          <span className="text-linen/50 shrink-0">◌</span>
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Preferred Print Volume Callout */}
-                <div className="mt-8 p-4 rounded-sm bg-white/5 border border-linen/15 flex items-center justify-between">
-                  <div className="flex flex-col">
-                    <span className="font-display text-lg text-wheat font-normal">10% OFF</span>
-                    <span className="font-sans text-[10px] text-linen/70 uppercase tracking-wider">Future Printed Volume creation</span>
-                  </div>
-                  <span className="font-sans text-[9px] text-linen/40 uppercase tracking-widest">member pricing</span>
-                </div>
-              </div>
-
-              {/* CARD 3 — LEGACY ($16.99 / MO) */}
-              <div className="bg-[#FAF8F3] p-7 sm:p-8 rounded-sm border border-[#C9AE7C]/60 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow relative">
-                <div className="flex flex-col">
-                  {/* Eyebrow & Badge */}
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
-                      PRESERVE IT
-                    </span>
-                    <span className="inline-block bg-[#F0ECE1] border border-[#C9AE7C]/30 text-[#8C733E] font-sans text-[9px] uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded-full">
-                      GENERATIONAL ARCHIVE
-                    </span>
-                  </div>
-
-                  {/* Title & Price */}
-                  <h3 className="font-display text-3xl sm:text-4xl text-[#1C1916] font-normal mt-3">
-                    LEGACY
-                  </h3>
-
-                  <div className="flex items-baseline gap-1.5 mt-2">
-                    <span className="font-display text-4xl text-[#1C1916] font-normal">$16.99</span>
-                    <span className="font-sans text-xs text-[#8C8275]">/ month</span>
-                  </div>
-
-                  <p className="font-sans text-[11px] text-[#8C8275] mt-1">
-                    Preserve more than the story.
-                  </p>
-
-                  <p className="font-reading text-sm text-[#4A4238] leading-relaxed font-light mt-4">
-                    For those who want Altheara to become something future generations can not only read—but experience.
-                  </p>
-
-                  {/* CTA Block */}
-                  <div className="mt-7 mb-6">
-                    <button 
-                      onClick={() => {
-                        if (typeof window !== "undefined") {
-                          window.dispatchEvent(new CustomEvent("open-begin-modal"));
-                        }
-                      }}
-                      className="w-full block text-center bg-[#2C241D] text-[#FAF9F6] font-sans text-xs uppercase tracking-wider font-bold py-3.5 rounded-full hover:bg-[#1C1916] transition-colors shadow-sm cursor-pointer"
-                    >
-                      BUILD MY LEGACY &rarr;
-                    </button>
-                    <span className="block text-center font-sans text-[10px] text-[#8C8275] tracking-wide mt-2">
-                      Includes complete Altheara membership.
-                    </span>
-                  </div>
-
-                  {/* Subline */}
-                  <div className="border-t border-[#E4DCCE]/80 pt-6">
-                    <span className="font-sans text-[10px] tracking-[0.2em] font-bold text-[#8C8275] uppercase block mb-1">
-                      EVERYTHING IN ALTHEARA
-                    </span>
-                    <span className="font-sans text-[10px] tracking-[0.2em] font-bold text-[#A68A56] uppercase block mb-3 mt-2">
-                      LEGACY BENEFITS &middot; AVAILABLE NOW
-                    </span>
-                    <ul className="font-reading text-sm text-[#2C241D] flex flex-col gap-2.5 font-light">
-                      {[
-                        "Full Altheara membership",
-                        "Legacy Vault",
-                        "Enhanced Digital Library",
-                        "Full Volume Studio access",
-                        "Priority access to new Legacy capabilities"
-                      ].map((feat, idx) => (
-                        <li key={idx} className="flex gap-2.5 items-start">
-                          <span className="text-[#A68A56] font-bold shrink-0">✓</span>
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Feature Group: AS LEGACY GROWS */}
-                  <div className="border-t border-[#E4DCCE]/60 pt-5 mt-5">
-                    <div className="flex items-center justify-between gap-2 mb-3">
-                      <span className="font-sans text-[10px] tracking-[0.2em] font-semibold text-[#8C8275] uppercase">
-                        AS LEGACY GROWS
-                      </span>
-                      <span className="font-sans text-[9px] tracking-wider text-[#A68A56] uppercase bg-[#A68A56]/10 px-2 py-0.5 rounded-full font-medium">
-                        Coming to Legacy
-                      </span>
-                    </div>
-                    <ul className="font-reading text-sm text-[#5A5248] flex flex-col gap-2.5 font-light">
-                      {[
-                        "Living Portrait™",
-                        "Annual voice & presence capture",
-                        "Volume-linked story narration",
-                        "Family & heir access",
-                        "Generational Library"
-                      ].map((feat, idx) => (
-                        <li key={idx} className="flex gap-2.5 items-start text-[#736C64]">
-                          <span className="text-[#8C8275] shrink-0">◌</span>
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Preferred Print Volume Callout */}
-                <div className="mt-8 p-4 rounded-sm bg-[#F5EFE3] border border-[#C9AE7C]/40 flex items-center justify-between">
-                  <div className="flex flex-col">
-                    <span className="font-display text-lg text-[#A68A56] font-normal">25% OFF</span>
-                    <span className="font-sans text-[10px] text-[#5A5248] uppercase tracking-wider">Future Printed Volume creation</span>
-                  </div>
-                  <span className="font-sans text-[9px] text-[#A68A56] uppercase tracking-widest font-medium">legacy pricing</span>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Status Legend Key */}
-            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-[11px] font-sans text-[#736C64] uppercase tracking-wider pt-2 border-t border-[#E4DCCE]/50 max-w-2xl mx-auto">
-              <span className="flex items-center gap-2">
-                <span className="text-[#A68A56] font-bold text-sm">✓</span> Available Now
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="text-[#8C8275] font-normal text-base">◌</span> Coming as Altheara & Legacy Evolve
-              </span>
-            </div>
-          </div>
-
-          {/* ==================================================
-              EDUCATIONAL BLOCKS: THE ALTHEARA LENS™ & LIVING PORTRAIT™
-              ================================================== */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto w-full pt-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch w-full">
             
-            {/* 1. Altheara Lens Education */}
-            <div className="p-8 sm:p-10 rounded-sm bg-white border border-[#E4DCCE] shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="font-sans text-[10px] tracking-[0.3em] text-[#8C8275] font-bold uppercase">
-                    THE ALTHEARA LENS™
-                  </span>
-                  <span className="font-sans text-[9px] tracking-wider uppercase text-[#A68A56] font-semibold bg-[#F0ECE1] px-2.5 py-0.5 rounded-full">
-                    Coming to Altheara
-                  </span>
-                </div>
-                
-                <h3 className="font-display text-2xl sm:text-3xl text-[#1C1916] font-normal leading-tight">
-                  YOUR MOMENTS SHOW YOU WHAT HAPPENED.<br />
-                  <span className="text-[#A68A56]">YOUR LENS SHOWS YOU WHAT THEY MEAN TOGETHER.</span>
+            {/* CARD 1 — OPEN ($0) */}
+            <div className="bg-[#FAF9F6] p-7 sm:p-8 rounded-sm border border-[#E4DCCE] shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow relative">
+              <div className="flex flex-col">
+                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#8C8275] uppercase">
+                  EXPERIENCE IT
+                </span>
+
+                <h3 className="font-display text-3xl sm:text-4xl text-[#1C1916] font-normal mt-3">
+                  OPEN
                 </h3>
-                
-                <p className="font-reading text-sm sm:text-base text-[#4A4238] leading-relaxed font-light mt-4">
-                  As more of your Echoes and Reflections accumulate, Altheara begins seeing across them—noticing recurring themes, patterns, seasons and changes that can be difficult to recognize while you&apos;re living them.
+
+                <div className="flex items-baseline gap-1.5 mt-2">
+                  <span className="font-display text-4xl text-[#1C1916] font-normal">$0</span>
+                </div>
+
+                <p className="font-sans text-[11px] text-[#8C8275] mt-1">
+                  Experience Altheara before deciding anything.
                 </p>
 
-                {/* Visual demonstration with 4 restrained examples */}
-                <div className="grid grid-cols-2 gap-3 mt-6 pt-6 border-t border-[#E4DCCE]/70">
-                  {[
-                    { theme: "FAMILY", insight: "appearing more often lately" },
-                    { theme: "CHANGE", insight: "a recurring thread this season" },
-                    { theme: "WORK", insight: "your relationship with it is shifting" },
-                    { theme: "HOME", insight: "becoming a stronger theme" }
-                  ].map((item, idx) => (
-                    <div key={idx} className="p-3.5 rounded-sm bg-[#FAF8F3] border border-[#E4DCCE]/80 flex flex-col gap-1">
-                      <span className="font-sans text-[10px] tracking-[0.2em] font-bold text-[#1C1916] uppercase">
-                        {item.theme}
-                      </span>
-                      <span className="font-reading text-xs text-[#8C8275] italic font-light">
-                        {item.insight}
-                      </span>
-                    </div>
-                  ))}
+                <div className="mt-3">
+                  <span className="inline-block bg-[#EAE7DE] text-[#5A5248] font-sans text-[9px] sm:text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-full">
+                    YOUR FIRST 7 MOMENTS ARE FREE
+                  </span>
+                </div>
+
+                <p className="font-reading text-sm text-[#5A5248] leading-relaxed font-light mt-4">
+                  Start small. See what happens when a few ordinary moments are given somewhere to stay.
+                </p>
+
+                <div className="mt-7 mb-6">
+                  <button 
+                    onClick={() => {
+                      if (typeof window !== "undefined") {
+                        window.dispatchEvent(new CustomEvent("open-begin-modal"));
+                      }
+                    }}
+                    className="w-full block text-center border border-[#1C1916]/30 text-[#1C1916] font-sans text-xs uppercase tracking-wider font-bold py-3.5 rounded-full hover:bg-stone/5 transition-colors cursor-pointer"
+                  >
+                    BEGIN &rarr;
+                  </button>
+                  <span className="block text-center font-sans text-[10px] text-[#8C8275] tracking-wide mt-2">
+                    No subscription required.
+                  </span>
+                </div>
+
+                <div className="border-t border-[#E4DCCE]/80 pt-6">
+                  <span className="font-sans text-[10px] tracking-[0.2em] font-bold text-[#8C8275] uppercase block mb-3">
+                    INCLUDED
+                  </span>
+                  <ul className="font-reading text-sm text-[#2C241D] flex flex-col gap-2.5 font-light">
+                    {[
+                      "7 Daily Invitations",
+                      "7 Echoes",
+                      "7 Personal Reflections",
+                      "Private Moment Archive",
+                      "1 Story Preview"
+                    ].map((feat, idx) => (
+                      <li key={idx} className="flex gap-2.5 items-start">
+                        <span className="text-[#A68A56] font-bold shrink-0">✓</span>
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-
-              <p className="font-reading text-xs sm:text-sm text-[#8C8275] italic font-light mt-6 pt-4 border-t border-[#E4DCCE]/60">
-                The more of your story Altheara understands, the clearer the Lens becomes.
-              </p>
             </div>
 
-            {/* 2. Living Portrait Education */}
-            <div className="p-8 sm:p-10 rounded-sm bg-[#FAF8F3] border border-[#C9AE7C]/40 shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="font-sans text-[10px] tracking-[0.3em] text-[#A68A56] font-bold uppercase">
-                    LIVING PORTRAIT™
+            {/* CARD 2 — ALTHEARA ($12.99 / MO) — PRIMARY ANCHOR */}
+            <div className="bg-[#1C1916] text-[#FAF9F6] p-7 sm:p-8 rounded-sm border border-[#3D352E] shadow-xl flex flex-col justify-between relative lg:scale-[1.03] z-10 hover:shadow-2xl transition-all">
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#C9AE7C] uppercase">
+                    LIVE WITH IT
                   </span>
-                  <span className="font-sans text-[9px] tracking-wider uppercase text-[#8C733E] font-semibold bg-[#F0ECE1] px-2.5 py-0.5 rounded-full border border-[#C9AE7C]/30">
-                    Coming to Legacy
+                  <span className="inline-block bg-[#C9AE7C]/20 border border-[#C9AE7C]/40 text-wheat font-sans text-[9px] uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded-full">
+                    MOST CHOSEN
                   </span>
                 </div>
 
-                <h3 className="font-display text-2xl sm:text-3xl text-[#1C1916] font-normal leading-tight">
-                  A STORY CAN PRESERVE WHAT YOU LIVED.<br />
-                  <span className="text-[#A68A56]">LIVING PORTRAIT IS DESIGNED TO PRESERVE MORE OF HOW YOU WERE.</span>
+                <h3 className="font-display text-3xl sm:text-4xl text-ivory font-normal mt-3">
+                  ALTHEARA
                 </h3>
 
-                <p className="font-reading text-sm sm:text-base text-[#4A4238] leading-relaxed font-light mt-4">
-                  Each year, Living Portrait is designed to capture elements of your voice and presence alongside that year&apos;s story—creating a deeply personal way for the people you leave your Library to experience the person behind the words.
+                <div className="flex items-baseline gap-1.5 mt-2">
+                  <span className="font-display text-4xl text-ivory font-normal">$12.99</span>
+                  <span className="font-sans text-xs text-linen/60">/ month</span>
+                </div>
+
+                <p className="font-sans text-[11px] text-linen/60 mt-1">
+                  Keep your story growing.
                 </p>
 
-                <div className="mt-6 p-5 rounded-sm bg-white border border-[#E4DCCE] flex flex-col gap-2">
-                  <span className="font-sans text-[9px] tracking-[0.25em] font-bold text-[#8C8275] uppercase">
-                    FUTURE PRESENCE
+                <p className="font-reading text-sm text-linen/85 leading-relaxed font-light mt-4">
+                  The more you leave here, the more Altheara can connect—turning individual moments into an evolving story of your life.
+                </p>
+
+                <div className="mt-7 mb-6">
+                  <button 
+                    onClick={() => {
+                      if (typeof window !== "undefined") {
+                        window.dispatchEvent(new CustomEvent("open-begin-modal"));
+                      }
+                    }}
+                    className="w-full block text-center bg-[#FAF9F6] text-[#1C1916] font-sans text-xs uppercase tracking-wider font-bold py-3.5 rounded-full hover:bg-ivory transition-colors shadow-sm cursor-pointer"
+                  >
+                    KEEP MY STORY GROWING &rarr;
+                  </button>
+                </div>
+
+                <div className="border-t border-linen/15 pt-6">
+                  <span className="font-sans text-[10px] tracking-[0.2em] font-bold text-[#C9AE7C] uppercase block mb-3">
+                    AVAILABLE NOW
                   </span>
-                  <p className="font-reading text-sm sm:text-base text-[#1C1916] italic font-light leading-relaxed">
-                    &ldquo;Imagine opening a Volume years from now and hearing its stories told in the voice connected to the life that lived them.&rdquo;
-                  </p>
+                  <ul className="font-reading text-sm text-linen/90 flex flex-col gap-2.5 font-light">
+                    {[
+                      "Everything in Open",
+                      "Unlimited Invitations",
+                      "Unlimited Echoes",
+                      "Unlimited Personal Reflections",
+                      "Growing Story & Chapters",
+                      "Timeline & Archive",
+                      "Digital Library"
+                    ].map((feat, idx) => (
+                      <li key={idx} className="flex gap-2.5 items-start">
+                        <span className="text-wheat font-bold shrink-0">✓</span>
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Very quiet divider: AS ALTHEARA GROWS */}
+                <div className="border-t border-linen/10 pt-5 mt-5">
+                  <span className="font-sans text-[9px] tracking-[0.25em] font-semibold text-linen/50 uppercase block mb-3">
+                    AS ALTHEARA GROWS
+                  </span>
+                  <ul className="font-reading text-sm text-linen/65 flex flex-col gap-2 font-light">
+                    {[
+                      "Altheara Lens™",
+                      "Annual Volume",
+                      "Volume Studio"
+                    ].map((feat, idx) => (
+                      <li key={idx} className="flex gap-2.5 items-center text-linen/70">
+                        <span className="text-linen/40 text-xs">○</span>
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
+            </div>
 
-              <p className="font-reading text-xs sm:text-sm text-[#8C8275] italic font-light mt-6 pt-4 border-t border-[#E4DCCE]/60">
-                Preserving presence and emotional truth across generations.
-              </p>
+            {/* CARD 3 — LEGACY ($16.99 / MO) */}
+            <div className="bg-[#FAF8F3] p-7 sm:p-8 rounded-sm border border-[#C9AE7C]/60 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow relative">
+              <div className="flex flex-col">
+                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
+                  PRESERVE IT
+                </span>
+
+                <h3 className="font-display text-3xl sm:text-4xl text-[#1C1916] font-normal mt-3">
+                  LEGACY
+                </h3>
+
+                <div className="flex items-baseline gap-1.5 mt-2">
+                  <span className="font-display text-4xl text-[#1C1916] font-normal">$16.99</span>
+                  <span className="font-sans text-xs text-[#8C8275]">/ month</span>
+                </div>
+
+                <p className="font-sans text-[11px] text-[#8C8275] mt-1">
+                  Preserve more than the story.
+                </p>
+
+                <p className="font-reading text-sm text-[#4A4238] leading-relaxed font-light mt-4">
+                  For those who want what they leave in Altheara to mean even more over time.
+                </p>
+
+                <div className="mt-7 mb-6">
+                  <button 
+                    onClick={() => {
+                      if (typeof window !== "undefined") {
+                        window.dispatchEvent(new CustomEvent("open-begin-modal"));
+                      }
+                    }}
+                    className="w-full block text-center bg-[#2C241D] text-[#FAF9F6] font-sans text-xs uppercase tracking-wider font-bold py-3.5 rounded-full hover:bg-[#1C1916] transition-colors shadow-sm cursor-pointer"
+                  >
+                    BUILD MY LEGACY &rarr;
+                  </button>
+                  <span className="block text-center font-sans text-[10px] text-[#8C8275] tracking-wide mt-2">
+                    Includes complete Altheara membership.
+                  </span>
+                </div>
+
+                <div className="border-t border-[#E4DCCE]/80 pt-6">
+                  <span className="font-sans text-[9px] tracking-[0.25em] font-semibold text-[#8C8275] uppercase block mb-3">
+                    AS LEGACY GROWS
+                  </span>
+                  <ul className="font-reading text-sm text-[#5A5248] flex flex-col gap-2 font-light">
+                    {[
+                      "Legacy Vault™",
+                      "Yearly Portrait",
+                      "Living Portrait™",
+                      "Heir Access",
+                      "Generational Library™"
+                    ].map((feat, idx) => (
+                      <li key={idx} className="flex gap-2.5 items-center text-[#736C64]">
+                        <span className="text-[#8C8275]/60 text-xs">○</span>
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
 
           </div>
 
           {/* ==================================================
-              SECTION 3 — PHYSICAL VOLUME
+              SECTION 2 — THE ACCUMULATION
               ================================================== */}
-          <div className="flex flex-col gap-10 border-t border-[#E4DCCE] pt-16 sm:pt-20 max-w-6xl mx-auto w-full">
+          <div className="flex flex-col items-center text-center max-w-2xl mx-auto py-16 sm:py-24 border-t border-[#E4DCCE]">
+            <span className="font-sans text-[11px] tracking-[0.3em] text-[#8C8275] font-bold uppercase mb-4">
+              HOW IT BEGINS
+            </span>
+
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-[#1C1916] font-normal tracking-tight mb-8">
+              IT STARTS SMALL.
+            </h2>
+
+            {/* Moment Beats */}
+            <div className="flex flex-col items-center gap-6 w-full max-w-lg mx-auto">
+              <div className="p-6 rounded-sm bg-white border border-[#E4DCCE] shadow-xs w-full text-left">
+                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase block mb-1">
+                  ONE MOMENT.
+                </span>
+                <p className="font-reading text-base sm:text-lg text-[#2C241D] leading-relaxed font-light italic">
+                  A few sentences. Something you noticed. Something you don&apos;t want to lose.
+                </p>
+              </div>
+
+              <div className="font-display text-sm sm:text-base text-[#8C8275] uppercase tracking-[0.25em]">
+                THEN ANOTHER.
+              </div>
+
+              <div className="font-display text-sm sm:text-base text-[#8C8275] uppercase tracking-[0.25em]">
+                AND ANOTHER.
+              </div>
+
+              {/* The synthesis beat */}
+              <div className="pt-6 border-t border-[#E4DCCE]/60 flex flex-col items-center gap-3 w-full">
+                <h3 className="font-display text-2xl sm:text-3xl text-[#1C1916] font-normal leading-tight">
+                  THE PIECES BEGIN TO FIND EACH OTHER.
+                </h3>
+                <p className="font-reading text-base text-[#5A5248] font-light">
+                  What felt separate begins becoming part of something larger.
+                </p>
+                <span className="font-display text-xl sm:text-2xl text-[#A68A56] tracking-wide font-normal mt-1">
+                  A STORY.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* ==================================================
+              SECTION 3 — THE YEAR
+              ================================================== */}
+          <div className="flex flex-col items-center text-center max-w-2xl mx-auto py-12 sm:py-16 border-t border-[#E4DCCE]">
+            <span className="font-sans text-[11px] tracking-[0.3em] text-[#8C8275] font-bold uppercase mb-4">
+              OVER TIME
+            </span>
+
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-[#1C1916] font-normal leading-tight tracking-tight">
+              A YEAR BECOMES<br />SOMETHING YOU CAN RETURN TO.
+            </h2>
+
+            <h3 className="font-display text-xl sm:text-2xl text-[#A68A56] font-normal mt-4">
+              YOUR FIRST VOLUME.
+            </h3>
+
+            <p className="font-reading text-base sm:text-lg text-[#5A5248] leading-relaxed font-light mt-3 max-w-lg">
+              The moments were small when you lived them.<br />
+              Together, they become the story of a year.
+            </p>
+          </div>
+
+          {/* ==================================================
+              SECTION 4 — THE ARTIFACT (PHYSICAL VOLUME)
+              ================================================== */}
+          <div className="flex flex-col gap-8 max-w-5xl mx-auto w-full py-12 sm:py-16 border-t border-[#E4DCCE]">
             <div className="flex flex-col gap-2 text-center max-w-2xl mx-auto">
               <span className="font-sans text-[11px] tracking-[0.3em] text-[#8C8275] font-bold uppercase">
                 THE ARTIFACT
@@ -642,12 +537,12 @@ export function JourneyFooter() {
                 YOUR YEAR.<br />MADE PHYSICAL.
               </h2>
               <p className="font-reading text-base sm:text-lg text-[#5A5248] leading-relaxed font-light mt-1">
-                Your Digital Volume doesn&apos;t have to remain digital. When a year is complete, Altheara will give you the option to turn it into a beautifully produced physical Volume made to join the Library of your life.
+                When a year is complete, your Digital Volume can become a beautifully produced physical book made to join the Library of your life.
               </p>
             </div>
 
             {/* Photographic Spread */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch mt-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch mt-4">
               <div className="relative rounded-sm overflow-hidden border border-[#E4DCCE] aspect-[4/3] group">
                 <img 
                   src="/media_10.jpg" 
@@ -674,349 +569,207 @@ export function JourneyFooter() {
               </div>
             </div>
 
-            {/* Member Preferred Pricing Callout */}
-            <div className="p-8 sm:p-10 rounded-sm bg-white border border-[#E4DCCE] shadow-xs flex flex-col md:flex-row justify-between items-center gap-8">
-              <div className="flex flex-col gap-2 text-center md:text-left">
-                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#8C8275] uppercase">
-                  MEMBER-PREFERRED PRICING
-                </span>
-                <p className="font-display text-2xl sm:text-3xl text-[#1C1916] font-normal">
-                  Reserved for those who live with the story.
-                </p>
-                <p className="font-reading text-sm text-[#736C64] font-light">
-                  Physical Volumes are printed on demand at year-end.
-                </p>
-              </div>
-
-              <div className="flex flex-wrap sm:flex-nowrap gap-4 shrink-0 w-full sm:w-auto">
-                <div className="flex-1 sm:w-48 p-4 rounded-sm bg-[#FAF8F3] border border-[#E4DCCE] text-center">
-                  <span className="font-sans text-[9px] tracking-[0.2em] font-bold text-[#8C8275] uppercase block mb-1">
-                    ALTHEARA MEMBERS
-                  </span>
-                  <span className="font-display text-xl sm:text-2xl text-[#1C1916] font-normal block">
-                    10% PREFERRED
-                  </span>
-                  <span className="font-reading text-xs text-[#8C8275] italic">pricing on physical Volumes</span>
-                </div>
-                <div className="flex-1 sm:w-48 p-4 rounded-sm bg-[#FAF8F3] border border-[#C9AE7C]/60 text-center">
-                  <span className="font-sans text-[9px] tracking-[0.2em] font-bold text-[#A68A56] uppercase block mb-1">
-                    LEGACY MEMBERS
-                  </span>
-                  <span className="font-display text-xl sm:text-2xl text-[#A68A56] font-normal block">
-                    25% PREFERRED
-                  </span>
-                  <span className="font-reading text-xs text-[#8C8275] italic">pricing on physical Volumes</span>
-                </div>
-              </div>
-            </div>
-
-            <p className="font-sans text-[11px] text-[#8C8275] tracking-wide text-center -mt-4">
-              Physical Volumes sold separately. Pricing available when ordering.
+            {/* One Quiet Line */}
+            <p className="font-reading text-sm text-[#736C64] italic text-center font-light mt-2">
+              Altheara and Legacy members receive preferred pricing on future Printed Volumes.
             </p>
           </div>
 
           {/* ==================================================
-              SECTION 4 — VOLUME STUDIO
+              SECTION 5 — THE LIBRARY
               ================================================== */}
-          <div className="flex flex-col gap-10 border-t border-[#E4DCCE] pt-16 sm:pt-20 max-w-6xl mx-auto w-full">
-            <div className="flex flex-col gap-2 text-center max-w-2xl mx-auto">
-              <div className="flex items-center justify-center gap-2 mb-1">
-                <span className="font-sans text-[11px] tracking-[0.3em] text-[#8C8275] font-bold uppercase">
-                  VOLUME STUDIO
-                </span>
-                <span className="font-sans text-[9px] tracking-wider uppercase text-[#A68A56] font-semibold bg-[#F0ECE1] px-2.5 py-0.5 rounded-full">
-                  Coming to Altheara & Legacy
-                </span>
-              </div>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-[#1C1916] font-normal leading-[1.12] tracking-tight">
-                YOUR LIFE.<br />YOUR BOOK. YOUR WAY.
-              </h2>
-              <p className="font-reading text-base sm:text-lg text-[#5A5248] leading-relaxed font-light mt-1">
-                Before a Volume becomes physical, make it unmistakably yours.
-              </p>
-            </div>
-
-            {/* Customization Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2">
-              {/* 1. COVER */}
-              <div className="p-6 sm:p-7 rounded-sm bg-white border border-[#E4DCCE] shadow-xs flex flex-col gap-3">
-                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
-                  01 &middot; COVER
-                </span>
-                <h3 className="font-display text-xl text-[#1C1916] font-normal">Tactile Binding</h3>
-                <p className="font-reading text-sm text-[#5A5248] leading-relaxed font-light">
-                  Choose cover treatments, personal imagery, typography and title presentation.
-                </p>
-              </div>
-
-              {/* 2. STORY */}
-              <div className="p-6 sm:p-7 rounded-sm bg-white border border-[#E4DCCE] shadow-xs flex flex-col gap-3">
-                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
-                  02 &middot; STORY
-                </span>
-                <h3 className="font-display text-xl text-[#1C1916] font-normal">Narrative Arc</h3>
-                <p className="font-reading text-sm text-[#5A5248] leading-relaxed font-light">
-                  Choose how your story is shaped while preserving the truth of the moments you captured.
-                </p>
-              </div>
-
-              {/* 3. CHAPTERS */}
-              <div className="p-6 sm:p-7 rounded-sm bg-white border border-[#E4DCCE] shadow-xs flex flex-col gap-3">
-                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
-                  03 &middot; CHAPTERS
-                </span>
-                <h3 className="font-display text-xl text-[#1C1916] font-normal">Personal Milestones</h3>
-                <p className="font-reading text-sm text-[#5A5248] leading-relaxed font-light">
-                  Review, edit and personalize chapters before finalizing your Volume.
-                </p>
-              </div>
-
-              {/* 4. MEMORIES */}
-              <div className="p-6 sm:p-7 rounded-sm bg-white border border-[#E4DCCE] shadow-xs flex flex-col gap-3">
-                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
-                  04 &middot; MEMORIES
-                </span>
-                <h3 className="font-display text-xl text-[#1C1916] font-normal">Visual Keepsakes</h3>
-                <p className="font-reading text-sm text-[#5A5248] leading-relaxed font-light">
-                  Add meaningful photographs and imagery throughout the book.
-                </p>
-              </div>
-
-              {/* 5. PREVIEW */}
-              <div className="p-6 sm:p-7 rounded-sm bg-white border border-[#E4DCCE] shadow-xs flex flex-col gap-3">
-                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
-                  05 &middot; PREVIEW
-                </span>
-                <h3 className="font-display text-xl text-[#1C1916] font-normal">Complete Proofing</h3>
-                <p className="font-reading text-sm text-[#5A5248] leading-relaxed font-light">
-                  Review the complete Volume before sending it to print.
-                </p>
-              </div>
-
-              {/* Principle Card */}
-              <div className="p-6 sm:p-7 rounded-sm bg-[#FAF8F3] border border-[#C9AE7C]/40 shadow-xs flex flex-col justify-between">
-                <div>
-                  <span className="font-sans text-[9px] tracking-[0.25em] font-bold text-[#A68A56] uppercase block mb-2">
-                    FOUNDATIONAL PRINCIPLE
-                  </span>
-                  <p className="font-reading text-sm text-[#2C241D] italic font-light leading-relaxed">
-                    &ldquo;Changing writing style must never change the underlying facts of your life. Altheara can change how the story is told, never what happened.&rdquo;
-                  </p>
-                </div>
-                <span className="font-sans text-[9px] tracking-wider text-[#8C8275] uppercase mt-4">
-                  Preservation of truth
-                </span>
-              </div>
-            </div>
-
-            {/* Storytelling Voice Styles Exploration */}
-            <div className="p-8 sm:p-10 rounded-sm bg-[#FAF8F3] border border-[#E4DCCE] shadow-xs flex flex-col gap-6">
-              <div className="flex flex-col gap-2">
-                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
-                  06 &middot; VOICE & STORYTELLING STYLES
-                </span>
-                <h3 className="font-display text-2xl sm:text-3xl text-[#1C1916] font-normal">
-                  Five Ways Your Truth Can Be Told
-                </h3>
-                <p className="font-reading text-sm sm:text-base text-[#5A5248] font-light">
-                  Select the storytelling tone that matches how you want your year remembered:
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pt-4 border-t border-[#E4DCCE]">
-                {[
-                  { name: "AUTHENTIC", desc: "Closest to your natural voice." },
-                  { name: "STORYTELLER", desc: "Warm, narrative and immersive." },
-                  { name: "AUTOBIOGRAPHICAL", desc: "Polished and reflective." },
-                  { name: "POETIC", desc: "Lyrical and atmospheric." },
-                  { name: "WITH HUMOR", desc: "Preserves more of the wit and personality in your memories." }
-                ].map((style, idx) => (
-                  <div key={idx} className="p-4 rounded-sm bg-white border border-[#E4DCCE]/80 flex flex-col gap-2">
-                    <span className="font-sans text-[11px] tracking-[0.2em] font-bold text-[#1C1916] uppercase">
-                      {style.name}
-                    </span>
-                    <p className="font-reading text-xs text-[#5A5248] leading-relaxed font-light">
-                      {style.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* ==================================================
-              SECTION 5 — ALTHEARA GROWS WITH YOU
-              ================================================== */}
-          <div className="flex flex-col gap-12 border-t border-[#E4DCCE] pt-16 sm:pt-20 max-w-6xl mx-auto w-full">
-            <div className="flex flex-col gap-3 text-center max-w-2xl mx-auto">
-              <span className="font-sans text-[11px] tracking-[0.3em] text-[#8C8275] font-bold uppercase">
-                THE LONGER STORY
-              </span>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-[#1C1916] font-normal leading-[1.12] tracking-tight">
-                IT STARTS SIMPLE.<br />IT DOESN&apos;T STAY SIMPLE.
-              </h2>
-              <p className="font-reading text-base sm:text-lg text-[#5A5248] leading-relaxed font-light mt-1">
-                What begins with one Echo becomes more meaningful with every year you live with it.
-              </p>
-            </div>
-
-            {/* 4-Stage Progression */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-              {/* Stage 1 */}
-              <div className="p-6 sm:p-7 rounded-sm bg-white border border-[#E4DCCE] shadow-xs flex flex-col justify-between">
-                <div className="flex flex-col gap-3">
-                  <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#8C8275] uppercase">
-                    01 — TODAY
-                  </span>
-                  <h3 className="font-display text-2xl text-[#1C1916] font-normal">CAPTURE</h3>
-                  <div className="font-reading text-sm text-[#2C241D] leading-relaxed font-normal flex flex-col gap-1">
-                    <p>One moment.</p>
-                    <p>One Echo.</p>
-                    <p>One Reflection.</p>
-                  </div>
-                </div>
-                <p className="font-reading text-xs text-[#8C8275] italic font-light mt-6 pt-4 border-t border-[#E4DCCE]/60">
-                  It takes only a few minutes to begin.
-                </p>
-              </div>
-
-              {/* Stage 2 */}
-              <div className="p-6 sm:p-7 rounded-sm bg-white border border-[#E4DCCE] shadow-xs flex flex-col justify-between">
-                <div className="flex flex-col gap-3">
-                  <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#8C8275] uppercase">
-                    02 — AS ALTHEARA LEARNS
-                  </span>
-                  <h3 className="font-display text-2xl text-[#1C1916] font-normal">UNDERSTAND</h3>
-                  <div className="font-reading text-sm text-[#2C241D] leading-relaxed font-normal flex flex-col gap-1">
-                    <p>Patterns emerge.</p>
-                    <p>Your Lens develops.</p>
-                    <p>Stories begin connecting.</p>
-                  </div>
-                </div>
-                <p className="font-reading text-xs text-[#8C8275] italic font-light mt-6 pt-4 border-t border-[#E4DCCE]/60">
-                  The more context Altheara has, the more it can help you see.
-                </p>
-              </div>
-
-              {/* Stage 3 */}
-              <div className="p-6 sm:p-7 rounded-sm bg-[#FAF8F3] border border-[#E4DCCE] shadow-xs flex flex-col justify-between">
-                <div className="flex flex-col gap-3">
-                  <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
-                    03 — AS YEARS ACCUMULATE
-                  </span>
-                  <h3 className="font-display text-2xl text-[#1C1916] font-normal">PRESERVE</h3>
-                  <div className="font-reading text-sm text-[#2C241D] leading-relaxed font-normal flex flex-col gap-1">
-                    <p>Stories become Chapters.</p>
-                    <p>Chapters become Volumes.</p>
-                    <p>Volumes become a Library.</p>
-                  </div>
-                </div>
-                <p className="font-reading text-xs text-[#8C8275] italic font-light mt-6 pt-4 border-t border-[#E4DCCE]/60">
-                  What once felt scattered begins to have a place.
-                </p>
-              </div>
-
-              {/* Stage 4 */}
-              <div className="p-6 sm:p-7 rounded-sm bg-[#FAF8F3] border border-[#C9AE7C]/60 shadow-xs flex flex-col justify-between">
-                <div className="flex flex-col gap-3">
-                  <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
-                    04 — OVER A LIFETIME
-                  </span>
-                  <h3 className="font-display text-2xl text-[#A68A56] font-normal">LEGACY</h3>
-                  <div className="font-reading text-sm text-[#1C1916] leading-relaxed font-normal flex flex-col gap-1">
-                    <p>Your words.</p>
-                    <p>Your voice.</p>
-                    <p>Your presence.</p>
-                    <p className="text-[#A68A56] font-medium pt-1">A Library your family can return to.</p>
-                  </div>
-                </div>
-                <p className="font-reading text-xs text-[#8C8275] italic font-light mt-6 pt-4 border-t border-[#E4DCCE]/60">
-                  The accumulated story of a life.
-                </p>
-              </div>
-            </div>
-
-            {/* Core Thesis Statement */}
-            <div className="p-10 sm:p-14 rounded-sm bg-white border border-[#E4DCCE] shadow-xs text-center max-w-4xl mx-auto flex flex-col gap-6">
-              <div className="flex flex-col gap-3">
-                <span className="font-sans text-[10px] tracking-[0.3em] font-bold text-[#8C8275] uppercase">
-                  THE CORE THESIS
-                </span>
-                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-[#1C1916] font-normal leading-snug">
-                  ALTHEARA BECOMES MORE VALUABLE FOR A SIMPLE REASON:<br />
-                  <span className="text-[#A68A56]">IT KNOWS MORE OF THE STORY.</span>
-                </h2>
-              </div>
-
-              <p className="font-reading text-base sm:text-lg text-[#5A5248] leading-relaxed font-light max-w-2xl mx-auto">
-                Every Echo adds context. Every Reflection adds understanding. Every year adds another layer. What begins as a quiet place to leave today&apos;s moment can eventually become something no one could recreate later—the accumulated story of a life.
-              </p>
-
-              <div className="pt-4 border-t border-[#E4DCCE]/60">
-                <p className="font-display text-lg sm:text-xl text-[#1C1916] italic font-normal">
-                  Start with one moment. Let time do the rest.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* 6. Secondary Non-Account Conversion (Point 8) */}
-          <div className="flex flex-col items-center text-center gap-4 border-t border-[#E4DCCE] pt-14 max-w-md mx-auto w-full">
-            <span className="font-sans text-[10px] tracking-[0.25em] text-[#8C8275] font-bold uppercase">
-              NOT READY TO BEGIN?
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto py-16 sm:py-24 border-t border-[#E4DCCE]">
+            <span className="font-sans text-[11px] tracking-[0.3em] text-[#8C8275] font-bold uppercase mb-6">
+              AND THEN ANOTHER YEAR.
             </span>
-            <p className="font-reading text-sm text-[#5A5248] leading-relaxed font-light">
-              Receive one thoughtful Invitation from Altheara each week.
-            </p>
-            <form 
-              onSubmit={(e) => { 
-                e.preventDefault(); 
-                alert("You are subscribed to weekly Altheara Invitations."); 
-              }}
-              className="flex flex-col sm:flex-row gap-2 w-full mt-1"
-            >
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                required
-                className="px-4 py-3 rounded-sm bg-white border border-[#E4DCCE] font-reading text-xs text-[#1C1916] placeholder-[#8C8275] focus:outline-none focus:border-[#C9AE7C] flex-1 font-light"
+
+            {/* Quiet Year Progression */}
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 font-display text-xl sm:text-2xl text-[#8C8275] mb-10">
+              <span className="text-[#1C1916] font-medium">2027</span>
+              <span className="text-[#C9AE7C]">&rarr;</span>
+              <span className="text-[#1C1916] font-medium">2028</span>
+              <span className="text-[#C9AE7C]">&rarr;</span>
+              <span className="text-[#1C1916] font-medium">2029</span>
+              <span className="text-[#C9AE7C]">&rarr;</span>
+              <span>2030</span>
+              <span className="text-[#8C8275]/40">&middot;</span>
+              <span>2031</span>
+              <span className="text-[#8C8275]/40">&middot;</span>
+              <span>2032</span>
+              <span className="text-[#8C8275]/40">&middot;</span>
+              <span>2033 &hellip;</span>
+            </div>
+
+            {/* Archival Shelf Image */}
+            <div className="w-full max-w-3xl rounded-sm overflow-hidden border border-[#E4DCCE] shadow-md my-4">
+              <img 
+                src="/media_12.jpg" 
+                alt="Row of linen-bound Altheara volumes on a wooden bookshelf"
+                className="w-full h-auto object-cover max-h-[380px]"
               />
-              <button 
-                type="submit" 
-                className="bg-[#3D352E] text-[#FAF9F6] font-sans text-[10px] uppercase tracking-[0.2em] font-bold px-5 py-3 rounded-sm hover:bg-[#1C1916] transition-colors cursor-pointer"
-              >
-                SEND ME INVITATIONS &rarr;
-              </button>
-            </form>
+            </div>
+
+            {/* Reveal Statement with Generous Whitespace */}
+            <div className="flex flex-col gap-4 mt-12 mb-4">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-[#1C1916] font-normal leading-tight tracking-tight">
+                ONE YEAR BECOMES A VOLUME.<br />
+                YEARS BECOME A LIBRARY.
+              </h2>
+              <p className="font-display text-2xl sm:text-3xl text-[#A68A56] font-normal tracking-wide mt-2">
+                YOUR LIBRARY.
+              </p>
+            </div>
           </div>
 
-          {/* 7. Final CTA Lockup (Pass 16) */}
-          <div className="flex flex-col items-center text-center gap-5 border-t border-[#E4DCCE] pt-16 sm:pt-20 pb-4 max-w-2xl mx-auto">
-            <h1 className="font-display text-4xl sm:text-5xl text-[#1C1916] font-normal leading-tight tracking-tight">
-              YOUR LIFE IS ALREADY HAPPENING.
-            </h1>
+          {/* ==================================================
+              SECTION 6 — THE SECRET
+              ================================================== */}
+          <div className="flex flex-col items-center text-center max-w-2xl mx-auto py-24 sm:py-36 border-t border-[#E4DCCE]">
+            <span className="font-sans text-[11px] tracking-[0.3em] text-[#8C8275] font-bold uppercase mb-12">
+              THE LONGER STORY
+            </span>
+
+            <div className="flex flex-col gap-10 font-display text-2xl sm:text-3xl md:text-4xl text-[#1C1916] font-normal leading-snug">
+              <p>
+                THE STRANGE THING IS,
+              </p>
+              <p className="text-[#5A5248]">
+                YOU NEVER HAD TO<br />
+                WRITE YOUR LIFE STORY.
+              </p>
+              <p>
+                YOU JUST KEPT<br />
+                LEAVING PIECES OF IT HERE.
+              </p>
+              <p className="text-[#A68A56] italic">
+                ALTHEARA KEPT THEM TOGETHER.
+              </p>
+            </div>
+          </div>
+
+          {/* ==================================================
+              SECTION 7 — TIME
+              ================================================== */}
+          <div className="flex flex-col items-center text-center max-w-3xl mx-auto py-16 sm:py-24 border-t border-[#E4DCCE]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 w-full items-start">
+              {/* TODAY */}
+              <div className="flex flex-col gap-2 p-5 rounded-sm bg-white border border-[#E4DCCE] shadow-xs">
+                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#8C8275] uppercase">
+                  TODAY
+                </span>
+                <p className="font-display text-xl text-[#1C1916] font-normal">
+                  One Echo.
+                </p>
+              </div>
+
+              {/* ONE YEAR */}
+              <div className="flex flex-col gap-2 p-5 rounded-sm bg-white border border-[#E4DCCE] shadow-xs">
+                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#8C8275] uppercase">
+                  ONE YEAR
+                </span>
+                <p className="font-display text-xl text-[#1C1916] font-normal">
+                  A Volume.
+                </p>
+              </div>
+
+              {/* TEN YEARS */}
+              <div className="flex flex-col gap-2 p-5 rounded-sm bg-[#FAF8F3] border border-[#E4DCCE] shadow-xs">
+                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
+                  TEN YEARS
+                </span>
+                <p className="font-display text-xl text-[#1C1916] font-normal">
+                  A Library.
+                </p>
+              </div>
+
+              {/* A LIFETIME */}
+              <div className="flex flex-col gap-2 p-5 rounded-sm bg-[#FAF8F3] border border-[#C9AE7C]/60 shadow-xs">
+                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
+                  A LIFETIME
+                </span>
+                <p className="font-reading text-sm text-[#1C1916] font-normal leading-snug">
+                  Something no one could recreate later.
+                </p>
+              </div>
+            </div>
+
+            <p className="font-display text-lg sm:text-xl text-[#1C1916] font-normal mt-12 max-w-xl">
+              WHAT BEGINS WITH A FEW MINUTES TODAY<br />
+              <span className="text-[#A68A56]">CAN BECOME DECADES OF A LIFE KEPT.</span>
+            </p>
+          </div>
+
+          {/* ==================================================
+              SECTION 8 — FINAL THESIS
+              ================================================== */}
+          <div className="flex flex-col items-center text-center max-w-2xl mx-auto py-16 sm:py-24 border-t border-[#E4DCCE]">
+            <span className="font-sans text-[11px] tracking-[0.3em] text-[#8C8275] font-bold uppercase mb-4">
+              THE CORE THESIS
+            </span>
+
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-[#1C1916] font-normal leading-tight tracking-tight">
+              ALTHEARA BECOMES MORE VALUABLE<br />FOR A SIMPLE REASON:
+            </h2>
             
-            <p className="font-reading text-xl sm:text-2xl text-[#8C8275] font-light">
-              Give it somewhere to live.
+            <p className="font-display text-2xl sm:text-3xl text-[#A68A56] font-normal tracking-wide mt-3 mb-6">
+              IT KNOWS MORE OF THE STORY.
             </p>
 
-            <div className="flex mt-3">
+            <div className="font-reading text-base sm:text-lg text-[#5A5248] leading-relaxed font-light flex flex-col gap-2 max-w-lg mx-auto">
+              <p>Every Echo adds context.</p>
+              <p>Every Reflection adds understanding.</p>
+              <p>Every year adds another layer.</p>
+              <div className="pt-4 border-t border-[#E4DCCE]/60 mt-2">
+                <p className="text-[#1C1916]">
+                  What begins as a quiet place for today&apos;s moment can become something no one could recreate later—
+                </p>
+                <p className="font-display text-xl sm:text-2xl text-[#A68A56] font-normal mt-2">
+                  THE ACCUMULATED STORY OF A LIFE.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ==================================================
+              FINAL CONVERSION
+              ================================================== */}
+          <div className="flex flex-col items-center text-center gap-6 py-20 sm:py-28 border-t border-[#E4DCCE] max-w-2xl mx-auto w-full">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-[#1C1916] font-normal leading-tight tracking-tight">
+              YOU DON&apos;T HAVE TO<br />PRESERVE A LIFETIME TODAY.
+            </h2>
+
+            <p className="font-display text-2xl sm:text-3xl text-[#A68A56] font-normal tracking-wide">
+              JUST ONE MOMENT.
+            </p>
+
+            <p className="font-reading text-base text-[#8C8275] font-light italic -mt-2">
+              That&apos;s how every Altheara begins.
+            </p>
+
+            <div className="flex flex-col items-center gap-2 mt-4">
               <button 
                 onClick={() => {
                   if (typeof window !== "undefined") {
-                    const evt = new CustomEvent("open-begin-modal");
-                    window.dispatchEvent(evt);
+                    window.dispatchEvent(new CustomEvent("open-begin-modal"));
                   }
                 }}
-                className="bg-[#1C1916] text-[#FAF9F6] font-sans text-xs uppercase tracking-[0.25em] font-bold px-9 py-4 rounded-sm hover:bg-[#2C2824] transition-all duration-300 shadow-md cursor-pointer"
+                className="bg-[#1C1916] text-[#FAF9F6] font-sans text-xs uppercase tracking-[0.25em] font-bold px-10 py-4 rounded-full hover:bg-[#2C2824] transition-all duration-300 shadow-md cursor-pointer"
               >
                 BEGIN YOUR STORY &rarr;
               </button>
+              <span className="font-sans text-[11px] text-[#8C8275] tracking-wide mt-2">
+                Your first seven moments are free.
+              </span>
             </div>
 
-            <span className="font-reading text-xs sm:text-sm italic text-[#8C8275] mt-1 font-light">
-              It starts with one moment.
-            </span>
+            <div className="mt-16 pt-10 border-t border-[#E4DCCE]/60 flex flex-col items-center gap-1.5">
+              <span className="font-sans text-xs tracking-[0.35em] text-[#1C1916] font-bold uppercase">
+                ALTHEARA
+              </span>
+              <span className="font-reading text-sm text-[#A68A56] italic font-light">
+                The place where a life is kept.
+              </span>
+            </div>
           </div>
 
         </div>
