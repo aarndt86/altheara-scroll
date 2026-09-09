@@ -244,9 +244,11 @@ export function JourneyFooter() {
             {/* CARD 1 — OPEN ($0) */}
             <div className="bg-[#FAF9F6] p-7 sm:p-8 rounded-sm border border-[#E4DCCE] shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow relative">
               <div className="flex flex-col">
-                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#8C8275] uppercase">
-                  EXPERIENCE IT
-                </span>
+                <div className="h-6 flex items-center justify-between">
+                  <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#8C8275] uppercase">
+                    EXPERIENCE IT
+                  </span>
+                </div>
 
                 <h3 className="font-display text-3xl sm:text-4xl text-[#1C1916] font-normal mt-3">
                   OPEN
@@ -260,15 +262,16 @@ export function JourneyFooter() {
                   Experience Altheara before deciding anything.
                 </p>
 
-                <div className="mt-3">
-                  <span className="inline-block bg-[#EAE7DE] text-[#5A5248] font-sans text-[9px] sm:text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-full">
-                    YOUR FIRST 7 MOMENTS ARE FREE
-                  </span>
+                <div className="mt-3 flex flex-col gap-2 min-h-[92px]">
+                  <div>
+                    <span className="inline-block bg-[#EAE7DE] text-[#5A5248] font-sans text-[9px] sm:text-[10px] uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded-full">
+                      YOUR FIRST 7 MOMENTS ARE FREE
+                    </span>
+                  </div>
+                  <p className="font-reading text-sm text-[#5A5248] leading-relaxed font-light">
+                    Start small. See what happens when a few ordinary moments are given somewhere to stay.
+                  </p>
                 </div>
-
-                <p className="font-reading text-sm text-[#5A5248] leading-relaxed font-light mt-4">
-                  Start small. See what happens when a few ordinary moments are given somewhere to stay.
-                </p>
 
                 <div className="mt-7 mb-6">
                   <button 
@@ -311,7 +314,7 @@ export function JourneyFooter() {
             {/* CARD 2 — ALTHEARA ($12.99 / MO) — PRIMARY ANCHOR */}
             <div className="bg-[#1C1916] text-[#FAF9F6] p-7 sm:p-8 rounded-sm border border-[#3D352E] shadow-xl flex flex-col justify-between relative lg:scale-[1.03] z-10 hover:shadow-2xl transition-all">
               <div className="flex flex-col">
-                <div className="flex items-center justify-between gap-2">
+                <div className="h-6 flex items-center justify-between gap-2">
                   <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#C9AE7C] uppercase">
                     LIVE WITH IT
                   </span>
@@ -333,9 +336,11 @@ export function JourneyFooter() {
                   Keep your story growing.
                 </p>
 
-                <p className="font-reading text-sm text-linen/85 leading-relaxed font-light mt-4">
-                  The more you leave here, the more Altheara can connect—turning individual moments into an evolving story of your life.
-                </p>
+                <div className="mt-3 flex flex-col gap-2 min-h-[92px]">
+                  <p className="font-reading text-sm text-linen/85 leading-relaxed font-light">
+                    The more you leave here, the more Altheara can connect—turning individual moments into an evolving story of your life.
+                  </p>
+                </div>
 
                 <div className="mt-7 mb-6">
                   <button 
@@ -348,6 +353,9 @@ export function JourneyFooter() {
                   >
                     KEEP MY STORY GROWING &rarr;
                   </button>
+                  <span className="block text-center font-sans text-[10px] text-transparent select-none mt-2" aria-hidden="true">
+                    &nbsp;
+                  </span>
                 </div>
 
                 <div className="border-t border-linen/15 pt-6">
@@ -396,9 +404,11 @@ export function JourneyFooter() {
             {/* CARD 3 — LEGACY ($16.99 / MO) */}
             <div className="bg-[#FAF8F3] p-7 sm:p-8 rounded-sm border border-[#C9AE7C]/60 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow relative">
               <div className="flex flex-col">
-                <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
-                  PRESERVE IT
-                </span>
+                <div className="h-6 flex items-center justify-between">
+                  <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
+                    PRESERVE IT
+                  </span>
+                </div>
 
                 <h3 className="font-display text-3xl sm:text-4xl text-[#1C1916] font-normal mt-3">
                   LEGACY
@@ -413,9 +423,11 @@ export function JourneyFooter() {
                   Preserve more than the story.
                 </p>
 
-                <p className="font-reading text-sm text-[#4A4238] leading-relaxed font-light mt-4">
-                  For those who want what they keep here to live beyond them.
-                </p>
+                <div className="mt-3 flex flex-col gap-2 min-h-[92px]">
+                  <p className="font-reading text-sm text-[#4A4238] leading-relaxed font-light">
+                    For those who want what they keep here to live beyond them.
+                  </p>
+                </div>
 
                 <div className="mt-7 mb-6">
                   <button 
@@ -440,7 +452,7 @@ export function JourneyFooter() {
                   <ul className="font-reading text-sm text-[#5A5248] flex flex-col gap-2 font-light">
                     {[
                       "Legacy Vault™",
-                      "Yearly Portrait",
+                      "Annual Portrait Capture",
                       "Living Portrait™",
                       "Heir Access",
                       "Generational Library™"
