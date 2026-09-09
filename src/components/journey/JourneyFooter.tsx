@@ -414,7 +414,7 @@ export function JourneyFooter() {
                 </p>
 
                 <p className="font-reading text-sm text-[#4A4238] leading-relaxed font-light mt-4">
-                  For those who want what they leave in Altheara to mean even more over time.
+                  For those who want what they keep here to live beyond them.
                 </p>
 
                 <div className="mt-7 mb-6">
@@ -678,7 +678,7 @@ export function JourneyFooter() {
                   TEN YEARS
                 </span>
                 <p className="font-display text-xl text-[#1C1916] font-normal">
-                  A Library.
+                  Your Library.
                 </p>
               </div>
 
@@ -687,13 +687,17 @@ export function JourneyFooter() {
                 <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-[#A68A56] uppercase">
                   A LIFETIME
                 </span>
-                <p className="font-reading text-sm text-[#1C1916] font-normal leading-snug">
-                  Something no one could recreate later.
+                <p className="font-display text-xl text-[#1C1916] font-normal">
+                  A life kept.
                 </p>
               </div>
             </div>
 
-            <p className="font-display text-lg sm:text-xl text-[#1C1916] font-normal mt-12 max-w-xl">
+            <p className="font-reading text-base sm:text-lg text-[#5A5248] italic font-light mt-8">
+              &ldquo;Something no one could recreate later.&rdquo;
+            </p>
+
+            <p className="font-display text-lg sm:text-xl text-[#1C1916] font-normal mt-8 max-w-xl">
               WHAT BEGINS WITH A FEW MINUTES TODAY<br />
               <span className="text-[#A68A56]">CAN BECOME DECADES OF A LIFE KEPT.</span>
             </p>
