@@ -32,7 +32,7 @@ export const journeyAssets: Record<string, JourneyAsset> = {
   cottage_doorway: {
     id: "cottage_doorway",
     environmentId: "cottage",
-    desktop: "/media_2.jpg",
+    desktop: "/cottage_doorway.jpg",
     type: "image",
     status: "approved",
     alt: "Cottage interior looking directly out of the open glass doorway, table removed, path visible",
