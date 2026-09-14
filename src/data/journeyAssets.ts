@@ -22,7 +22,7 @@ export const journeyAssets: Record<string, JourneyAsset> = {
     id: "cottage",
     environmentId: "cottage",
     desktop: "/final%20hero%20change.mp4",
-    poster: "/media_1.jpg",
+    poster: "/hero_poster.jpg",
     type: "video",
     status: "approved",
     alt: "Warm wooden cottage interior with open glass doors looking directly out at a winding trail and distant lake with gently swaying curtains",
