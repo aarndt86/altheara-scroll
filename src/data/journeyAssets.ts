@@ -21,7 +21,7 @@ export const journeyAssets: Record<string, JourneyAsset> = {
   cottage: {
     id: "cottage",
     environmentId: "cottage",
-    desktop: "/HERO%20IMAGE.mp4",
+    desktop: "/final%20hero%20change.mp4",
     poster: "/media_1.jpg",
     type: "video",
     status: "approved",
