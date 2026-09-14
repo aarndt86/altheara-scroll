@@ -59,10 +59,10 @@ export const journeyAssets: Record<string, JourneyAsset> = {
   first_job: {
     id: "first_job",
     environmentId: "trail",
-    desktop: "/media_5.jpg",
+    desktop: "/first_job.jpg",
     type: "image",
     status: "approved",
-    alt: "First job laptop setup next to a wooden cabin beside the trail overlooking the water",
+    alt: "Person journaling at a wooden table on a rustic porch overlooking the trail, lake, and mountains at golden hour sunset",
     focalPoint: { desktop: { x: 50, y: 50 } }
   },
   family: {
