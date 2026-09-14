@@ -41,7 +41,7 @@ export const journeyAssets: Record<string, JourneyAsset> = {
   breakfast: {
     id: "breakfast",
     environmentId: "trail",
-    desktop: "/media_3.jpg",
+    desktop: "/breakfast.jpg",
     type: "image",
     status: "approved",
     alt: "Outdoor picnic table family breakfast beside the winding trail path",
