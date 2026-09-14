@@ -21,8 +21,8 @@ export const journeyAssets: Record<string, JourneyAsset> = {
   cottage: {
     id: "cottage",
     environmentId: "cottage",
-    desktop: "/final%20hero%20change.mp4",
-    poster: "/hero_poster.jpg",
+    desktop: "/HERO%20IMAGE.mp4",
+    poster: "/media_1.jpg",
     type: "video",
     status: "approved",
     alt: "Warm wooden cottage interior with open glass doors looking directly out at a winding trail and distant lake with gently swaying curtains",
@@ -32,7 +32,7 @@ export const journeyAssets: Record<string, JourneyAsset> = {
   cottage_doorway: {
     id: "cottage_doorway",
     environmentId: "cottage",
-    desktop: "/cottage_doorway.jpg",
+    desktop: "/media_2.jpg",
     type: "image",
     status: "approved",
     alt: "Cottage interior looking directly out of the open glass doorway, table removed, path visible",
@@ -41,7 +41,7 @@ export const journeyAssets: Record<string, JourneyAsset> = {
   breakfast: {
     id: "breakfast",
     environmentId: "trail",
-    desktop: "/breakfast.jpg",
+    desktop: "/media_3.jpg",
     type: "image",
     status: "approved",
     alt: "Outdoor picnic table family breakfast beside the winding trail path",
@@ -50,19 +50,19 @@ export const journeyAssets: Record<string, JourneyAsset> = {
   graduation: {
     id: "graduation",
     environmentId: "trail",
-    desktop: "/graduation.jpg",
+    desktop: "/media_4.jpg",
     type: "image",
     status: "approved",
-    alt: "Graduation celebration with cap and gown next to the path with family overlooking the golden sunlit mountain trail and lake",
+    alt: "Graduation celebration with cap and gown next to the path with a 'WE ARE SO PROUD OF YOU!' banner",
     focalPoint: { desktop: { x: 50, y: 50 } }
   },
   first_job: {
     id: "first_job",
     environmentId: "trail",
-    desktop: "/first_job.jpg",
+    desktop: "/media_5.jpg",
     type: "image",
     status: "approved",
-    alt: "Person journaling at a wooden table on a rustic porch overlooking the trail, lake, and mountains at golden hour sunset",
+    alt: "First job laptop setup next to a wooden cabin beside the trail overlooking the water",
     focalPoint: { desktop: { x: 50, y: 50 } }
   },
   family: {
