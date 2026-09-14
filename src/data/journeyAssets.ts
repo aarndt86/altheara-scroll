@@ -50,10 +50,10 @@ export const journeyAssets: Record<string, JourneyAsset> = {
   graduation: {
     id: "graduation",
     environmentId: "trail",
-    desktop: "/media_4.jpg",
+    desktop: "/graduation.jpg",
     type: "image",
     status: "approved",
-    alt: "Graduation celebration with cap and gown next to the path with a 'WE ARE SO PROUD OF YOU!' banner",
+    alt: "Graduation celebration with cap and gown next to the path with family overlooking the golden sunlit mountain trail and lake",
     focalPoint: { desktop: { x: 50, y: 50 } }
   },
   first_job: {
